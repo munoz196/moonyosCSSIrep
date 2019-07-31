@@ -21,3 +21,12 @@ print(superheroes[::2])
 #     print("Top 5 Heroes:", superheroes)
 # else:
 #     print ("Hero not found.")
+
+states = {
+"CA":"California",
+"NY":"New York",
+"TX":"Texas",
+}
+
+for abbreviation in states :
+    print(abbreviation + " is short for " + states[abbreviation])
