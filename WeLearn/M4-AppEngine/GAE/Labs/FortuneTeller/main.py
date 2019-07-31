@@ -60,7 +60,9 @@ class FortuneHandler(webapp2.RequestHandler):
         self.response.write(start_template.render())
 
     def post(self):
-        my_dict={}
+        random_fortune=get_fortune()
+        astro_sign = self.request.get('user_astrological_sign')
+        my_dict={'the_fortune': random_fortune, 'the_astro_sign': astro_sign }
         end_template=jinja_current_directory.get_template("templates/fortune_results.html")
         self.response.write(end_template.render(my_dict))
 
